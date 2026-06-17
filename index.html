@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Aisha ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+    color:white;
+    overflow-x:hidden;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+h1{
+    font-size:4rem;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    font-size:1.3rem;
+    margin-bottom:20px;
+}
+
+.heart{
+    font-size:90px;
+    animation:beat 1.2s infinite;
+}
+
+@keyframes beat{
+    50%{transform:scale(1.2);}
+}
+
+.btn{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#ff4d6d;
+    font-size:1rem;
+    cursor:pointer;
+}
+
+.section{
+    padding:70px 20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.card{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:25px;
+    margin:20px 0;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:15px;
+    height:300px;
+    object-fit:cover;
+}
+
+#loveMessage{
+    margin-top:20px;
+    font-size:1.2rem;
+    font-weight:bold;
+}
+
+.counter{
+    font-size:2rem;
+    margin-top:15px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="heart">❤️</div>
+
+    <h1>Aisha Ayudia Innara</h1>
+
+    <p class="subtitle">
+        Untuk seseorang yang selalu membuat hariku lebih indah ✨
+    </p>
+
+    <div class="counter" id="counter"></div>
+
+    <button class="btn" onclick="showLove()">
+        Klik Aku ❤️
+    </button>
+
+    <div id="loveMessage"></div>
+</section>
+
+<section class="section">
+
+    <div class="card">
+        <h2>💌 Surat Untukmu</h2>
+        <br>
+
+        <p>
+            Hai Aisha,
+            terima kasih karena sudah hadir dalam hidupku.
+            Mungkin aku tidak selalu sempurna,
+            tapi satu hal yang pasti,
+            aku selalu bahagia setiap kali bersamamu.
+
+            Setiap senyummu membuat hariku lebih baik.
+            Setiap kenangan yang kita buat akan selalu menjadi bagian terindah dalam hidupku.
+
+            Aku berharap kita bisa terus menciptakan cerita baru bersama,
+            hari ini, besok, dan seterusnya.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>📸 Galeri Kenangan</h2>
+        <br>
+
+        <div class="gallery">
+
+            <img src="foto1.jpg" alt="">
+            <img src="foto2.jpg" alt="">
+            <img src="foto3.jpg" alt="">
+            <img src="foto4.jpg" alt="">
+            <img src="foto5.jpg" alt="">
+
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    Made with ❤️ for Aisha Ayudia Innara
+</footer>
+
+<script>
+
+function showLove(){
+    document.getElementById("loveMessage").innerHTML =
+    "Aku sayang kamu lebih dari kata-kata yang bisa aku tulis. ❤️";
+}
+
+const startDate = new Date("2024-09-05");
+
+function updateCounter(){
+
+    const now = new Date();
+
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000*60*60*24));
+
+    document.getElementById("counter").innerHTML =
+    "❤️ Bersama selama " + days + " hari ❤️";
+}
+
+updateCounter();
+setInterval(updateCounter,1000);
+
+</script>
+
+</body>
+</html>
